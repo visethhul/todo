@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Page2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "defaultTab",
+        "value": "\"Table\""
+      },
+      {
+        "name": "colors",
+        "value": "{\n  gmail: \"#8ae2e6\",\n  hotmail: \"#62b7d2\"\n}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page2_JSObject1",
+  "deleted": false,
+  "gitSyncId": "661dfc24edd38109d6d86cf3_661e6f01b7c777103b437157"
+}

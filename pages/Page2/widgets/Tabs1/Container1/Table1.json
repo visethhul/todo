@@ -3,7 +3,7 @@
     "borderColor": "#E0DEDE",
     "isVisibleDownload": true,
     "iconSVG": "/static/media/icon.c4395b694ca4b5a84741345b057b6866.svg",
-    "topRow": 5,
+    "topRow": 6,
     "isSortable": true,
     "type": "TABLE_WIDGET_V2",
     "inlineEditingSaveOption": "ROW_LEVEL",
@@ -27,7 +27,10 @@
         {"key": "primaryColumns.EditActions1.isDiscardDisabled"},
         {"key": "primaryColumns.customColumn1.buttonColor"},
         {"key": "primaryColumns.customColumn1.borderRadius"},
-        {"key": "primaryColumns.customColumn1.boxShadow"}
+        {"key": "primaryColumns.customColumn1.boxShadow"},
+        {"key": "primaryColumns.customColumn2.menuColor"},
+        {"key": "primaryColumns.customColumn2.borderRadius"},
+        {"key": "primaryColumns.customColumn2.boxShadow"}
     ],
     "needsHeightForContent": true,
     "leftColumn": 0,
@@ -70,7 +73,8 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1713252565941,
+    "columnUpdatedAt": 1713272787979,
+    "originalBottomRow": 35,
     "defaultSelectedRowIndices": [0],
     "needsErrorInfo": false,
     "mobileBottomRow": 29,
@@ -85,14 +89,17 @@
         "birthdate",
         "isActive",
         "customColumn1",
+        "customColumn2",
         "EditActions1"
     ],
     "dynamicPropertyPathList": [
         {"key": "primaryColumns.EditActions1.isSaveDisabled"},
-        {"key": "primaryColumns.EditActions1.isDiscardDisabled"}
+        {"key": "primaryColumns.EditActions1.isDiscardDisabled"},
+        {"key": "primaryColumns.email.textColor"},
+        {"key": "onRowSelected"}
     ],
     "displayName": "Table",
-    "bottomRow": 33,
+    "bottomRow": 34,
     "columnWidthMap": {},
     "parentRowSpace": 10,
     "hideCard": false,
@@ -101,7 +108,8 @@
     "dynamicTriggerPathList": [
         {"key": "onAddNewRowSave"},
         {"key": "primaryColumns.customColumn1.onClick"},
-        {"key": "primaryColumns.EditActions1.onSave"}
+        {"key": "primaryColumns.EditActions1.onSave"},
+        {"key": "onRowSelected"}
     ],
     "parentColumnSpace": 8.38437557220459,
     "borderWidth": "1",
@@ -359,6 +367,62 @@
             "cellBackground": "",
             "verticalAlignment": "CENTER"
         },
+        "customColumn2": {
+            "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+            "computedValue": "",
+            "isEditable": false,
+            "notation": "standard",
+            "alias": "menu",
+            "enableSort": true,
+            "isSaveVisible": true,
+            "id": "customColumn2",
+            "isDisabled": false,
+            "allowSameOptionsInNewRow": true,
+            "validation": {},
+            "isCellVisible": true,
+            "isDerived": true,
+            "textSize": "0.875rem",
+            "buttonStyle": "rgb(3, 179, 101)",
+            "menuItems": {
+                "menuItemkpp0nnmoya": {
+                    "widgetId": "hzx27dkbi5",
+                    "index": 1,
+                    "id": "menuItemkpp0nnmoya",
+                    "label": "Add",
+                    "isDisabled": false,
+                    "isVisible": true
+                },
+                "menuItem0t42gk4fcu": {
+                    "widgetId": "ukjimh72xq",
+                    "index": 0,
+                    "id": "menuItem0t42gk4fcu",
+                    "label": "delete",
+                    "isDisabled": false,
+                    "isVisible": true
+                }
+            },
+            "allowCellWrapping": false,
+            "index": 9,
+            "isDiscardVisible": true,
+            "isVisible": true,
+            "label": "menu",
+            "labelColor": "#FFFFFF",
+            "columnType": "menuButton",
+            "thousandSeparator": true,
+            "horizontalAlignment": "LEFT",
+            "isCellEditable": false,
+            "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+            "menuColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+            "menuItemsSource": "STATIC",
+            "decimals": 0,
+            "width": 150,
+            "enableFilter": true,
+            "sticky": "",
+            "originalId": "customColumn2",
+            "currencyCode": "USD",
+            "customAlias": "",
+            "verticalAlignment": "CENTER"
+        },
         "isActive": {
             "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"isActive\"]))}}",
             "isEditable": true,
@@ -428,6 +492,7 @@
             "verticalAlignment": "CENTER"
         }
     },
+    "onRowSelected": "{{JSObject1.defaultTab = \"Detail\"}}",
     "key": "65a7sgxz53",
     "canFreezeColumn": true,
     "isDeprecated": false,
@@ -447,6 +512,7 @@
     "horizontalAlignment": "LEFT",
     "isVisibleSearch": true,
     "responsiveBehavior": "fill",
+    "originalTopRow": 7,
     "mobileLeftColumn": 0,
     "isVisiblePagination": true,
     "verticalAlignment": "CENTER"
